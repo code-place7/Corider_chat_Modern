@@ -64,6 +64,12 @@ export default function Header() {
             </TouchableOpacity>
           </View>
         )}
+        {/* Date Indicator */}
+        <View className="flex-row items-center px-4 py-3">
+          <View className="flex-1 h-px bg-gray-200" />
+          <Text className="text-xs text-gray-400 mx-3">12 JAN, 2</Text>
+          <View className="flex-1 h-px bg-gray-200" />
+        </View>
       </View>
     </View>
   );

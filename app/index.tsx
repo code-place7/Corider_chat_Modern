@@ -69,7 +69,11 @@ export default function App() {
 
   // Renders each chat item using the ChatBubble component doing this way beacuse chat list was taking too long to render
   const renderChatItem = ({ item }: { item: ChatMessage }) => (
-    <ChatBubble message={item} />
+    <ChatBubble
+      message={item.message}
+      isMe={item.sender.self}
+      image={item.sender.image}
+    />
   );
 
   return (

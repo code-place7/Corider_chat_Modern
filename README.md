@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+<div align="center">
+# CoRider Chat App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![CoRider Banner](https://via.placeholder.com/800x200?text=CoRider+Chat+App)
 
-## Get started
+A real-time chat application for ride-sharing groups built with Expo and React Native. Connect with fellow travelers, coordinate your journey, and make your shared rides more enjoyable!
 
-1. Install dependencies
+[![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-   ```bash
-   npm install
-   ```
+</div>
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Features
 
-In the output, you'll find options to open the app in a
+- 🧩 **UI Matching Provided Design** using NativeWind (Tailwind CSS for React Native)
+- 📩 **FlatList Rendering** for chat messages
+- ⬇️ **Pagination** (Load More on Scroll)
+- 💬 Chat Bubbles with:
+  - Sender Name
+  - Message Text
+  - Time
+  - Avatar Image
+- 📦 Expo-powered build for Android and iOS
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📱 Screenshots
 
-## Get a fresh project
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <img src="./assets/images/intern.jpg" width="250" alt="Chat Screen" />
+  
+</div>
 
-When you're ready, run:
+## 🚀 Getting Started
 
-```bash
-npm run reset-project
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or newer)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/workflow/expo-cli/)
+
+## ⚙️ How to Run
+
+git clone https://github.com/code-place7/react-native-chat-ui.git
+cd react-native-chat-ui
+npm install
+npx expo start
+Scan the QR code to run the app on your mobile using the Expo Go app.
+
+## 🛠️ Project Structure
+
+```
+corider-chat/
+├── app/                  # Main application code
+│   ├── _layout.tsx       # Root layout component
+│   └── index.tsx         # Main chat screen
+├── assets/               # Static assets
+│   ├── fonts/            # Custom fonts
+│   └── images/           # Images and icons
+├── components/           # Reusable UI components
+│   ├── ChatBubble.tsx    # Message bubble component
+│   ├── ChatInput.tsx     # Message input component
+│   ├── Header.tsx        # App header component
+│   └── SafeScreen.tsx    # Safe area wrapper
+├── app.json              # Expo configuration
+├── global.css            # Global styles
+├── tailwind.config.js    # Tailwind CSS configuration
+└── tsconfig.json         # TypeScript configuration
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 Technologies Used
 
-## Learn more
+- **[Expo](https://expo.dev/)**: Development platform for React Native
+- **[React Native](https://reactnative.dev/)**: Framework for building native apps
+- **[TypeScript](https://www.typescriptlang.org/)**: Type-safe JavaScript
+- **[NativeWind](https://www.nativewind.dev/)**: Tailwind CSS for React Native
+- **[Expo Router](https://docs.expo.dev/router/introduction/)**: File-based routing for Expo
+- **[Ionicons](https://ionic.io/ionicons)**: Icon library
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🤝 Contributing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Join the community
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Join our community of developers creating universal apps.
+## 📄 License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is part of an internship assignment and for educational use only.
+
+## 📞 Contact
+
+Have questions or suggestions? Reach out to us:
+
+- **Email**: monumandel3@gmail.com
+
+---
+
+<div align="center">
+  
+### ⭐ Star us on GitHub — it helps!
+<p align="center">
+ 👨‍💻 Author
+Monu Mandal 
+</p>
+
+</div>

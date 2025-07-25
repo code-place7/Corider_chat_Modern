@@ -1,14 +1,14 @@
 import React from "react";
 import { Image, Text, View } from "react-native";
 
-const ChatBubble = ({ message, isMe }: any) => {
+const ChatBubble = ({ message, isMe, image }: any) => {
   return (
     // Outer container with vertical margin and horizontal alignment
     <View className={`my-1 flex-row ${isMe ? "justify-end" : "justify-start"}`}>
       {/* Show avatar only if the message is NOT from me */}
       {!isMe && (
         <Image
-          source={require("../assets/images/avatar.png")}
+          source={{ uri: image }}
           // Fake avatar image
           className="w-8 h-8 rounded-full mr-2 self-end"
         />

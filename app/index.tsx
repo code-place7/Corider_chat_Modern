@@ -67,6 +67,11 @@ export default function App() {
     fetchMessages();
   }, [page]);
 
+  // Renders each chat item using the ChatBubble component doing this way beacuse chat list was taking too long to render
+  const renderChatItem = ({ item }: { item: ChatMessage }) => (
+    <ChatBubble message={item} />
+  );
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       <Header />
@@ -76,13 +81,10 @@ export default function App() {
         inverted
         onEndReached={loadMoreChats}
         onEndReachedThreshold={0.5}
-        renderItem={({ item }) => (
-          <ChatBubble
-            message={item.message}
-            isMe={item.sender?.self}
-            image={item.sender.image}
-          />
-        )}
+        renderItem={renderChatItem}
+        initialNumToRender={10}
+        maxToRenderPerBatch={5}
+        windowSize={5}
         ListFooterComponent={
           isLoadingMore ? (
             <ActivityIndicator size="small" color="#999" className="my-2" />

@@ -1,7 +1,9 @@
 import React from "react";
 import { Image, Text, View } from "react-native";
 
-const ChatBubble = ({ message, isMe, image }: any) => {
+//wrapping the component with React.memo to prevent unnecessary re-renders
+// This is useful because component receives props that don't change often
+const ChatBubble = React.memo(({ message, isMe, image }: any) => {
   return (
     // Outer container with vertical margin and horizontal alignment
     <View className={`my-1 flex-row ${isMe ? "justify-end" : "justify-start"}`}>
@@ -28,6 +30,6 @@ const ChatBubble = ({ message, isMe, image }: any) => {
       </View>
     </View>
   );
-};
+});
 
 export default ChatBubble;

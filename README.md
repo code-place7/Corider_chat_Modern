@@ -1,7 +1,6 @@
 <div align="center">
-# CoRider Chat App
 
-![CoRider Banner](https://via.placeholder.com/800x200?text=CoRider+Chat+App)
+# 🏍️CoRider Chat App
 
 A real-time chat application for ride-sharing groups built with Expo and React Native. Connect with fellow travelers, coordinate your journey, and make your shared rides more enjoyable!
 
@@ -30,7 +29,8 @@ A real-time chat application for ride-sharing groups built with Expo and React N
 
 ## 📱 Screenshots
 
-<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center;">
+<div align="center">
+
   <img src="./assets/images/intern.jpg" width="250" alt="Chat Screen" />
   
 </div>

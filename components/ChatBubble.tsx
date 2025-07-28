@@ -1,35 +1,56 @@
 import React from "react";
 import { Image, Text, View } from "react-native";
 
-//wrapping the component with React.memo to prevent unnecessary re-renders
-// This is useful because component receives props that don't change often
-const ChatBubble = React.memo(({ message, isMe, image }: any) => {
-  return (
-    // Outer container with vertical margin and horizontal alignment
-    <View className={`my-1 flex-row ${isMe ? "justify-end" : "justify-start"}`}>
-      {/* Show avatar only if the message is NOT from me */}
-      {!isMe && (
-        <Image
-          source={{ uri: image }}
-          // Fake avatar image
-          className="w-8 h-8 rounded-full mr-2 self-end"
-        />
-      )}
+// Define the ChatMessage type
+type ChatMessage = {
+  id: string;
+  message: string;
+  sender: {
+    self: boolean;
+    image: string;
+    name: string;
+  };
+};
 
-      {/* Message bubble container */}
+// Define props type that matches what the component actually uses
+type ChatBubbleProps = Pick<ChatMessage, "message" | "sender">;
+
+// React.memo for performance (prevents unnecessary re-renders)
+const ChatBubble = React.memo(
+  ({
+    message,
+    isMe,
+    image,
+  }: {
+    message: string;
+    isMe: boolean;
+    image: string;
+  }) => {
+    return (
       <View
-        className={`
-          rounded-xl px-4 py-2 max-w-[75%]
-          ${isMe ? "bg-blue-500 self-end" : "bg-gray-100"}
-        `}
+        className={`my-1 flex-row ${isMe ? "justify-end" : "justify-start"}`}
       >
-        {/* Message text */}
-        <Text className={`${isMe ? "text-white" : "text-black"}`}>
-          {message}
-        </Text>
+        {!isMe && (
+          <Image
+            source={{ uri: image }}
+            className="w-8 h-8 rounded-full mr-2 self-end"
+          />
+        )}
+        <View
+          className={`rounded-xl px-4 py-2 max-w-[75%] ${
+            isMe ? "bg-blue-500 self-end" : "bg-gray-100"
+          }`}
+        >
+          <Text className={`${isMe ? "text-white" : "text-black"}`}>
+            {message}
+          </Text>
+        </View>
       </View>
-    </View>
-  );
-});
+    );
+  }
+);
+
+// Optional: improve React DevTools readability
+ChatBubble.displayName = "ChatBubble";
 
 export default ChatBubble;

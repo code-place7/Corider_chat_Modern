@@ -5,7 +5,7 @@ import "../global.css";
 export default function RootLayout() {
   return (
     <SafeScreen>
-      <Slot />;
+      <Slot />
     </SafeScreen>
   );
 }
